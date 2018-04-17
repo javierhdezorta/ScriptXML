@@ -55,5 +55,5 @@ def read_Csv(file_Path):
 
 
 if __name__ == "__main__":
-    _file = "/home/javier/PycharmProjects/DataSetFacturas/data.csv"
+    _file = "data.csv"
     read_Csv(_file)
