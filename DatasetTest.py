@@ -21,12 +21,12 @@ def indent(elem, level=0):
 
 def buildFactura(num, InvoiceNo, CustomerID, InvoiceDate, Operation):
     root = ET.Element("root")
-    ET.SubElement(root, "entityId").text = f"{CustomerID}"
+    ET.SubElement(root, "entityId").text = f"{CustomerID}"  #rfc
     ET.SubElement(root, "entityType").text = "user"
-    ET.SubElement(root, "event").text = f"{Operation}"
-    ET.SubElement(root, "eventTime").text = f"{InvoiceDate}"
+    ET.SubElement(root, "event").text = f"{Operation}" # buy
+    ET.SubElement(root, "eventTime").text = f"{InvoiceDate}"  #data
     ET.SubElement(root, "rating").text = "5"
-    ET.SubElement(root, "targetEntityId").text = f"{InvoiceNo}"
+    ET.SubElement(root, "targetEntityId").text = f"{InvoiceNo}"  # unidad concepto
     ET.SubElement(root, "targetEntityType").text = "item"
 
     indent(root)
@@ -50,7 +50,7 @@ def read_Csv(file_Path):
         cid=CID[:5]
         operation=random.choice(ops)
 
-        print(InvoiceNo,InvoiceNo,cid,InvoiceDate,operation)
+        #print(InvoiceNo,InvoiceNo,cid,InvoiceDate,operation)
         buildFactura(InvoiceNo, InvoiceNo, cid, InvoiceDate, operation)
 
 
