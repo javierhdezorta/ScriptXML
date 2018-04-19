@@ -21,8 +21,8 @@ https://www.jetbrains.com/pycharm/download/#section=linux
 
 # 5. Verificar que los import se encuentre :
 
-```from xml.etree import ElementTree as ET
-import pandas as pd```
+```from xml.etree import ElementTree as ET```
+```import pandas as pd```
 
 
 de otro modo instalarlos utilizando anaconda, tipear en consola :
